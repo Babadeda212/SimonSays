@@ -4,6 +4,7 @@
   <div class="gamefild">
       <Game />
       <Menu />
+      <p class="titleLose visible">Вы закончили на <span class="lose"></span> раунде</p>
   </div>
   </div>
 </template>
@@ -17,7 +18,7 @@ export default {
   components: {
     Game,
     Menu
-  },
+  }
   
 }
 </script>
@@ -35,5 +36,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+ }
+ .visible{
+   visibility: hidden;
  }
 </style>

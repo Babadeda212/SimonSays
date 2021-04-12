@@ -1,20 +1,39 @@
 <template>
-  <div id="app">
-    <HelloWorld/>
+  <div id="app" >
+  <h1 class="title">Simon Say Game</h1>
+  <div class="gamefild">
+      <Game />
+      <Menu />
+  </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Game from './components/game.vue'
+import Menu from './components/menu.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Game,
+    Menu
+  },
+  
 }
 </script>
 
 <style>
-
+ #app{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .gamefild{
+       height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
 </style>

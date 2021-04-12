@@ -5,6 +5,7 @@
       <Game />
       <Menu />
       <p class="titleLose visible">Вы закончили на <span class="lose"></span> раунде</p>
+
   </div>
   </div>
 </template>

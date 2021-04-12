@@ -22,16 +22,7 @@ let copy = [];
 let action;
 let sec = 1500;
 
-let audio = [];
-audio.push(new Audio(require('./sounds/1.mp3')));
-audio.push(new Audio(require('./sounds/2.mp3')));
-audio.push(new Audio(require('./sounds/3.mp3')));
-audio.push(new Audio(require('./sounds/4.mp3')));
-for( let i=0;i<block.length;i++){
-    block[i].addEventListener('click',()=>{
-        audio[i].play();
-    })
-}
+
 
 function activBlock(el){
     el.style.opacity = 1;
@@ -54,7 +45,6 @@ function newRaund(){
     for(let i=0;i<arrRand.length;i++){
         setTimeout(()=>{
             activBlock(block[arrRand[i]-1]);
-            audio[arrRand[i]-1].play();
         },(i+1)*sec)
     }
     copy=arrRand.slice(0);
